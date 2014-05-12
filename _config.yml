@@ -4,13 +4,13 @@
 # 3. config.yml
 
 name: muhyde
-description: Web Development & Design
+description: Web development blog
 author:
   name: mu
   email: muflexnet@gmail.com
 
 # Grunt handles images and assets.
-exclude: ['img', 'css', 'js', 'fonts',
+exclude: ['img', 'css', 'js', 'fonts', 'node_modules', 'scss',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
 include: ['.htaccess']
@@ -24,7 +24,7 @@ paginate: 1
 paginate_path: 'page:num'
 
 # Markdown library
-markdown: kramdown
+markdown: redcarpet
 #   auto_ids: true
 #   footnote_nr: 1
 #   entity_output: as_char

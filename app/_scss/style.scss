@@ -1,9 +1,33 @@
-@import "responsive";
+@import "bourbon/bourbon";
 @import "compass/reset";
 @import "compass/utilities/general/clearfix";
+@import "compass/css3";
 @import "compass/css3/font-face";
+
+@mixin sticky-footer($footer-height, $wrapper-selector: unquote("#wrapper"), $container-selector: unquote("#container"), $footer-selector: unquote("#footer")) {
+    html, body {
+      height: 100%;
+    }
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    #{$wrapper-selector} {
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+      margin: 0 auto -$footer-height;
+      #{$container-selector} {
+        padding: 0 0 $footer-height 0;
+      }
+    }
+  #{$footer-selector} {
+    height: $footer-height;
+  }
+}
+
 body {
-	font-family: 'CaudexRegular';
+  font-family: 'Lato';
 	font-size: 1em;
 	line-height: 1.4;
 	height: 100%;
@@ -11,43 +35,60 @@ body {
 	margin: 0; 
 	background-position: top left;
 	background-image: url('../img/graphy.png');
-	hgroup {width: 200px; }
+  hgroup {
+    width: 200px;
+      @include flex-grow(0);
+      @include flex-shrink(1);
+      @include flex-basis(auto);
+  }
+}
+header {
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-flow(nowrap);
+  @include justify-content(space-between);
+  img {
+    height: 100%; //corrects flex nowrap on image
+    @include flex-direction(column);
+    @include flex-grow(0);
+    @include flex-shrink(0);
+    @include flex-basis(auto);
+  }
 }
 .head_title {
 	position: relative;
 	-webkit-transform: rotate(90deg);  /* Saf3.1+, Chrome */
     -moz-transform: rotate(90deg);  /* FF3.5+ */
     -ms-transform: rotate(90deg);  /* IE9 */
-     -o-transform: rotate(90deg);  /* Opera 10.5 */
-     transform: rotate(90deg);
-     filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
+    -o-transform: rotate(90deg);  /* Opera 10.5 */
+    transform: rotate(90deg);
+    filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
        M11=6.123233995736766e-17, M12=-1, M21=1, M22=6.123233995736766e-17, sizingMethod='auto expand');
-     zoom: 1;
-     margin: 0;
+    zoom: 1;
+    margin: 0;
 }
 #mu_h1 {
 	font-size: 2.1em;
 	letter-spacing: 0.1em;
 	word-spacing: 0.05em;
-	top:-2.7em;
-	left: 1.6em;
-	padding-left: 0.55em;
+  top: 6.2rem;
+  right: 4.6rem;
 	font-weight: lighter;
 }
 #mu_h4  {
 	font-size: .7em;
 	font-weight: lighter;
 	letter-spacing: 0.1em;
-	top: -4.2em;
-	left: 2.9em;
+  top: 7.2rem;
+  right: 5.9rem;
 }
 .mudef {
-	position: relative;
-	top:-18em;
-	left: 21em;
 	height: 220px;
 	font-size: 0.8em;
-	overflow: hidden;
+  @include flex-grow(0);
+  @include flex-shrink(1);
+  @include flex-basis(auto);
+
 	h2 {
 		font-size: 1.15em;
 		letter-spacing: 0.2em;
@@ -56,7 +97,7 @@ body {
 		margin: 0;
 	}
 	p {
-		font-family: 'CaudexItalic',serif;
+    font-weight: lighter;
 		word-spacing: 0.2em;
 		line-height: 1.2em;
 		height: 155px;
@@ -65,90 +106,82 @@ body {
 		padding:2.2em 0.5em 0em 1.6em;
 	}
 }
-#manf {
-    @include clearfix;
-    display: inline-block;
-    margin: 0 auto;
-    p {
-      font-size: 0.8em;
-      width: 100%;
-      padding: 0.5rem 0;
+.content {
+  @include flex-grow(1);
+  @include flex-shrink(0);
+}
+.container {
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-flow(nowrap);
+  @include justify-content(space-between);
+  section {
+    @include display(flex);
+    @include flex-direction(column);
+  }
+}
+.flex {
+  @include display(flex);
+  @include justify-content(flex-end);
+  @include flex-direction(row);
+  @include flex-flow(wrap);
+  li {
+    @include flex(0 1 10%);
+    overflow: hidden;
+    padding: 1em 1.5em;
+    position: relative;
+    perspective: 1000px;
+    max-width: 143px;
+  }
+  a {
+    display: block;
+    /*3d space for children*/
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    -moz-background-size: cover;
+    background-size: cover;
+    @include filter(grayscale (.5) opacity(0.8) hue-rotate(120deg));
+    &:hover {
+      transform: rotateX(80deg); transform-origin: bottom;
+      opacity: 0.6;
     }
-    .bottom {
-      display: table;
-      margin: 0 auto;
-    }
-    ul {
-      display: inline-table;
-      margin: 0 auto;
-      padding: 0.4rem 0rem 1.4rem;
-    }
-    li {
-      padding: 0em 1.5em;
-      position: relative;
-      perspective: 1000px;
-      @media screen and (max-width: 550px) {
-        padding: 0;
-      }
-      a {
-        display: block;
-        border: 1px solid transparent;
-        /*disabling the translucent black bg on the main image*/
-        background-size: 0, cover;
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-        /*3d space for children*/
-        transform-style: preserve-3d;
-        transition: all 0.5s;
-        .top {
-            border: 1px solid white;
-        }
-        &:hover {
-          border: 1px solid blue;
-          transform: rotateX(80deg); transform-origin: bottom;
-        }
-        &:before {
-          opacity: 1;
-          /*blurred effect using box shadow as filter: blur is not supported in all browsers*/
-          box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.5);
-          /*pushing the shadow down and scaling it down to size*/
-          transform: rotateX(0) translateZ(-60px) scale(0.85);
-        }
-      }
-      &:after {
-        /*36px high element positioned at the bottom of the image*/
-        content: ''; position: absolute; left: 0; bottom: 0;
-        width: 100%; height: 1.5rem;
-        /*inherit the main BG*/
-        background-size: cover, cover;
-        /*draw the BG bottom up*/
-        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
-        background-position: bottom;
-        /*rotate the surface 90deg on the bottom axis*/
-        transform: rotateX(90deg); transform-origin: bottom;
-      }
-      &:before {
-        content: ''; position: absolute; top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
-        transition: all 0.5s;
-        /*by default the shadow will be almost flat, very transparent, scaled down with a large blur*/
-        opacity: 0.15;
-        transform: rotateX(95deg) translateZ(-80px) scale(0.75);
-        transform-origin: bottom;
-      }
-      span {
-        color: white;
-        text-transform: uppercase;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        font-size: 0.7rem;
-        text-align: center;
-        /*the rotation is a bit less than the bottom surface to avoid flickering*/
-        transform: rotateX(-89.99deg); transform-origin: top;
-        z-index: 1;
-      }
+    &:before {
+      opacity: 1;
+      /*blurred effect using box shadow as filter: blur is not supported in all browsers*/
+      box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.5);
+      /*pushing the shadow down and scaling it down to size*/
+      transform: rotateX(0) translateZ(-60px) scale(0.85);
     }
   }
+  span {
+    color: black;
+    text-transform: uppercase;
+    position: absolute;
+    max-width: 100%;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-size: 0.6rem;
+    text-align: center;
+    /*the rotation is a bit less than the bottom surface to avoid flickering*/
+    transform: rotateX(-89.99deg); transform-origin: top;
+    z-index: 1;
+  }
+}
+@each $member in android, angular, app, bower, cc, chef, compass, cordova, git, github, grunt, gulp, html5, jekyll, laravel, puppet, sketch, vagrant, wp, yeoman {
+  .#{$member}_logo {
+    background-image: url("../img/sk/#{$member}_logo.png");
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: 48px;
+    width: 48px;
+  }
+}
+.jekyll_logo {
+  width: 170px;
+  height: 73px;
+}
+#footer {
+  @include sticky-footer(30px);
+}

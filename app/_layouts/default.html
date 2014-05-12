@@ -1,128 +1,50 @@
 <!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-
-    <!-- build:css({app,.tmp}) /css/main.css -->
-    <link rel="stylesheet" href="/css/syntax.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- endbuild -->
-
-    <!-- build:js(app) /js/head-scripts.js -->
-    <!-- Replace with a custom modernizer build for production -->
-    <script src="/_bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-
-  </head>
+<html>
+  {% include head.html %}
   <body>
-    <!--[if lt IE 8]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <body>
-    <div class="page">
-    <header>
-        <img src="img/muwhite.png"/>
-        <hgroup>
-            <h1 id="mu_h1" class="head_title">Mu Flex</h1>
-            <h4 id="mu_h4" class="head_title">Website Design</h4>
-        </hgroup>
-        <div class="mudef">
-            <p>Mu (Japanese/Korean) and Wu (Chinese) is a word which has been roughly translated as ”no“,”none”,”null”,”without” and “no meaning”.While used mainly in Japanese or Chinese as a prefix to imply the absense of something, in English it is more famously used as a response to certain koans and other questions in zen buddhism, intending to  indicate that the question itself was wrong.</p>
-        </div>
-    </header>
-    <ul class="top">
-      <li><a title="AngularJS" class="ajs" href="https://angularjs.org/"><span>AngularJS</span></a></li>
-      <li><a title="HTML5" class="bss" href="http://html5test.com/"><span>HTML5</span></a></li>
-      <li><a title="Creative Cloud" class="acc" href="http://www.adobe.com/products/creativesuite.html"><span>Creative Cloud</span></a></li>
-    </ul>
-    <div id="visualization"></div>
-    <!-- <div id="tabcontainer" >
-      <ul>
-        <li><a href="#a">Services</a></li>
-        <li><a href="#b">Clients</a></li>
-        <li><a href="#c" target="_self">Contact</a></li>
+  <header>
+    <img src="/img/muwhite.png"/>
+    <hgroup>
+      <h1 id="mu_h1" class="head_title">Mu Flex</h1>
+      <h4 id="mu_h4" class="head_title">Website Design</h4>
+    </hgroup>
+    <section class="mudef">
+      <p>Mu (Japanese/Korean) and Wu (Chinese) is a word which has been
+roughly translated as ”no“,”none”,”null”,”without” and “no meaning”.
+While used mainly in Japanese or Chinese as a prefix to imply the absense
+of something, in English it is more famously used as a response to certain
+koans and other questions in zen buddhism, intending to  indicate that
+the question itself was wrong.</p>
+    </section>
+  </header>
+  <div class="container">
+    <div class="content container">
+      {{ content }}
+    </div>
+    <section>
+      <h1>Tech Roll</h1>
+      <ul class="flex">
+        <li><a title="" class="cc_logo" href="https://creative.adobe.com/"><span>Adobe</span></a></li>
+        <li><a title="" class="android_logo" href="http://developer.android.com/sdk/index.html?hl=sk"><span>Android</span></a></li>
+        <li><a title="" class="angular_logo" href="http://angularjs.org"><span>Angular</span></a></li>
+        <li><a title="" class="bower_logo" href="http://bower.io"><span>Bower</span></a></li>
+        <li><a title="" class="chef_logo" href="https://wiki.opscode.com/display/chef/Home"><span>Chef</span></a></li>
+        <li><a title="" class="compass_logo" href="http://compass-style.org/"><span>Compass</span></a></li>
+        <li><a title="" class="cordova_logo" href="http://cordova.apache.org/"><span>Cordova</span></a></li>
+        <li><a title="" class="git_logo" href="http://git-scm.com/"><span>Git</span></a></li>
+        <li><a title="" class="github_logo" href="http://github.com"><span>Github</span></a></li>
+        <li><a title="" class="grunt_logo" href="http://gruntjs.com/"><span>Grunt</span></a></li>
+        <li><a title="" class="gulp_logo" href="http://gulpjs.com/"><span>Gulp</span></a></li>
+        <li><a title="" class="html5_logo" href="http://html5test.com/"><span>HTML5</span></a></li>
+        <li><a title="" class="laravel_logo" href="http://laravel.com/"><span>Laravel</span></a></li>
+        <li><a title="" class="puppet_logo" href="http://puppetlabs.com/"><span>Puppet</span></a></li>
+        <li><a title="" class="sketch_logo" href="http://bohemiancoding.com/"><span>Sketch</span></a></li>
+        <li><a title="" class="vagrant_logo" href="http://www.vagrantup.com/"><span>Vagrant</span></a></li>
+        <li><a title="" class="wp_logo" href="http://wordpress.org/"><span>Wordpress</span></a></li>
+        <li><a title="" class="yeoman_logo" href="http://yeoman.io/"><span>Yeoman</span></a></li>
       </ul>
-      <div  id="a">
-        <article id="a1" >
-          <div class="imgplace">
-              <img id="moda" src="{{ site.url }}img/html5.png"/>
-          </div>
-          <p>Employ the latest in browser support and technologies with <a href="http://html5test.com/">HTML5</a><div id="modal1" class="moddiag" title="HTML5 and Friends"><p>Does your browser support the new HTML standards?<a id="test5" href="http://html5test.com/">Test Here</a></p></div>
-        </article>
-        <article id="a2" >
-          <div class="imgplace">
-              <img id="modb" src="{{ site.url }}img/adobe_feather.png"/>
-          </div>
-          <p>Design and development using <a= href="http://www.adobe.com/products/creativesuite.html">Adobe CS</a><div id="modal2" class="moddiag" title="Adobe Creative Suite"><p>Adobe has set the standards in web development for many years with tools like Photoshop,Flash,Fireworks and Illustrator and continues to develop with programs like After Effects, Flash Builder,Catalyst and Soundbooth</p></div>
-          </p>
-        </article>
-        <article id="a3" >
-          <div class="imgplace">
-              <img id="modc" src="{{ site.url }}img/worldwp.png"/>
-          </div>
-          <p>Use the world's most trusted blogging platform - <a href="http://wordpress.org/">Wordpress</a><div id="modal3" class="moddiag" title="Wordpress Blogging CMS"><p>The total experience-let us install,style and setup your new Wordpress platform to whatever specifications you require.Blog,Store,Promo....let us know</p></div>
-          </p>
-        </article>
-        <article id="a4" >
-          <div class="imgplace">
-              <img id="modd" src="{{ site.url }}img/android125.png"/>
-          </div>
-          <p>The Mobile Experience - <a href="http://android.org/">Android</a><div id="modal4" class="moddiag" title="Android Dev"><p>The total experience-let us install,style and setup your new Android App</p></div>
-          </p>
-        </article>
-      </div>
-      <div id="b">
-        <ul>
-          <li class="client_tile">
-              <h2>Richard Lloyd</h2>
-              <img src="{{ site.url }}img/rlsgrab.png"/>
-              <p>A pioneering spirit in Pantomime,Richard was always going to appeal to the Mu ethic of hybridization and innovation.Richard's entire back catalogue of original playscripts is accessible in a datagrid form,showing both script synopsis and characters along with photos from each of the associated productions</p>
-          </li>
-          <li class="client_tile">
-              <h2>Arc Creative Design</h2>
-              <img src="{{ site.url }}img/arcwg.jpg"/>
-              <p>Kent based Illustration and interpretation company, specialising in large format.Check out their Wordpress driven site for their designs and interpretations</p>
-          </li>
-          <li class="client_tile">
-              <h2>Big Blue Audio</h2>
-              <img src="{{ site.url }}img/bbgrab.png"/>
-              <p>The site for my good friend Nick, who runs his own PA hire and turntable repairs company in the South-East of the UK.Flex application to show off big speakers and handle client communications</p>
-          </li>
-          <li class="client_tile">
-              <h2>Lakeland Lodge</h2>
-              <img src="{{ site.url }}img/lakegrab.png"/>
-              <p>A small fishing holiday stay in County Leitrim,Eire. Small but functional, the site is a 'two sided' design to mimic a postcard-a familiar layout and content navigation framework.</p>
-          </li>
-          <li class="client_tile">
-              <h2>Psionek</h2>
-              <img src="{{ site.url }}img/psionekgrab.png"/>
-              <p>
-              A flyposter approach to flash websites,much of the loading content is via external linked text files, allowing user content to be updated by the client in an accessible and familiar form.
-              The site also has external sound links to audition tracks, and a php driven paypal shopping cart</p>
-          </li>
-        </ul>
-        <div id="cl_adv">
-          <a id="pre" href="#"></a>
-          <a id="pos" href="#"></a>
-        </div>
-      </div>
-      <div id="c">
-        <div id="response"></div>
-
-        </div>
-      </div>
-    </div> -->
-      <footer>Some text coming here, or do i mean social icons?
-        <img  src="{{ site.url }}img/sk/jekyll_logo.png"/>
-      </footer>
-    {% include scripts.html %}
-    {% include googleanalytics.html %}
-
+    </section>
+  </div>
+  {% include footer.html %}
   </body>
 </html>
