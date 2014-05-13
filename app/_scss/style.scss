@@ -34,7 +34,7 @@ body {
 	width: 100%;
 	margin: 0; 
 	background-position: top left;
-	background-image: url('../img/graphy.png');
+  background-image: url('../img/graphy.png');
   hgroup {
     width: 200px;
       @include flex-grow(0);
@@ -101,7 +101,7 @@ header {
 		word-spacing: 0.2em;
 		line-height: 1.2em;
 		height: 155px;
-		width: 50%;
+    width: 50%;
 		margin:0;
 		padding:2.2em 0.5em 0em 1.6em;
 	}
