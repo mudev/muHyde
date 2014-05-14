@@ -30,7 +30,7 @@
   }
 }
 body {
-  font-family: "Lato";
+  font-family: "lato-light";
   font-size: 1em;
 	line-height: 1.4;
 	height: 100%;
@@ -45,7 +45,7 @@ body {
 }
 header {
   @include grid-row();
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   img {
     @include grid-column(2);
   }
@@ -91,8 +91,15 @@ header {
 		padding:2.2em 0.5em 0em 1.6em;
 	}
 }
+.home {
+  margin: 1rem 0.25rem;
+  h1{
+    font-size: 2.2rem;
+    font-variant: small-caps;
+  }
+}
 .content {
-  @include grid-column(6);
+  @include grid-column(8);
 }
 .flex {
   li {
@@ -138,9 +145,9 @@ header {
   }
 }
 .tekrol {
-  @include grid-column(6);
+  @include grid-column(4);
 }
-@each $member in android, angular, app, bower, cc, chef, compass, cordova, git, github, grunt, gulp, html5, jekyll, laravel, puppet, sketch, vagrant, wp, yeoman {
+@each $member in android, angular, app, bower, cc, chef, compass, cordova, git, github, grunt, gulp, html5, jekyll, laravel, puppet, sketch, vagrant, wp, yeoman, zurb {
   .#{$member}_logo {
     background-image: url("/img/sk/#{$member}_logo.png");
     display: block;
@@ -155,13 +162,20 @@ header {
   height: 73px;
 }
 footer {
+  display: inline-block;
   @include sticky-footer(30px);
 }
+.post {
 
+  h1 {
+    font-size:1.4em;
+    letter-spacing: 0.1rem;
+  }
+}
 
 .post-date {
   display: block;
-  margin: -10px 0 10px;
+  margin: 0px 0 10px;
   color: #9a9a9a;
 }
 
