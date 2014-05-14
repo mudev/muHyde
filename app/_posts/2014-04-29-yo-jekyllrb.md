@@ -9,10 +9,9 @@ categories: jekyll update
 You now have
 
 - Jekyll
-- Html5 Boilerplate based templates
-- jQuery and Modernizr
 - Sass and Compass
-- kramdown markdown parser and Pygments highlighter
+- -and i personally added Foundation via Bower
+- maruku markdown parser and Pygments highlighter
 
 installed.
 

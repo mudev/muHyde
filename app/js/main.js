@@ -12,4 +12,4 @@ var createCodeFlower = function(json) {
 	// create a new CodeFlower
 	currentCodeFlower = new CodeFlower("#visualization", w, h).update(json);
 };
-	d3.json('data.json', createCodeFlower);
+	d3.json('../data.json', createCodeFlower);
