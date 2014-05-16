@@ -29,6 +29,14 @@
     height: $footer-height;
   }
 }
+@mixin rounded_borders($color, $ca, $cb, $cc, $cd, $width) {
+    -moz-border-radius: $ca $cb $cc $cd;
+    -webkit-border-radius: $ca $cb $cc $cd;
+    -khtml-border-radius: $ca $cb $cc $cd;
+    -o-border-radius: $ca $cb $cc $cd;
+    border-radius: $ca $cb $cc $cd;
+    border: $width $color solid;
+}
 body {
   font-family: "lato-light";
   font-size: 1em;
@@ -37,9 +45,9 @@ body {
 	width: 100%;
 	margin: 0; 
 	background-position: top left;
-  background-image: url('img/graphy.png');
-  hgroup {
-    @include grid-column(1);
+  background-image: url('/img/graphy.png');
+  vgroup {
+    @include grid-column(2);
     min-height: 100%;
   }
 }
@@ -51,7 +59,7 @@ header {
   }
 }
 .head_title {
-	position: relative;
+  position: relative;
 	-webkit-transform: rotate(90deg);  /* Saf3.1+, Chrome */
     -moz-transform: rotate(90deg);  /* FF3.5+ */
     -ms-transform: rotate(90deg);  /* IE9 */
@@ -63,7 +71,7 @@ header {
     margin: 0;
 }
 #mu_h1 {
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   letter-spacing: 0.1rem;
   word-spacing: 0.05rem;
 	font-weight: lighter;
@@ -164,10 +172,11 @@ header {
 }
 footer {
   display: inline-block;
-  @include sticky-footer(30px);
+  @include sticky-footer(3em);
 }
 .post {
-
+  background-color: #FFFFFF;
+  @include rounded_borders(#FFF, 3px, 3px, 3px, 3px, 0px);
   h1 {
     font-size:1.4em;
     letter-spacing: 0.1rem;
