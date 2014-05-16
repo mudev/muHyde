@@ -7876,7 +7876,7 @@ body {
   width: 100%;
   margin: 0;
   background-position: top left;
-  background-image: url("/img/graphy.png");
+  background-image: url("../img/graphy.png");
 }
 /* line 49, ../../app/_scss/style.scss */
 body vgroup {
