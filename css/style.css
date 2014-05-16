@@ -7836,12 +7836,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
   font-family: "lato-light";
-  src: url('/.tmp/css/fonts/lato-light-webfont.woff') format('woff'), url('/.tmp/css/fonts/lato-light-webfont.ttf') format('truetype'), url('/.tmp/css/fonts/lato-light-webfont.eot') format('embedded-opentype'), url('/.tmp/css/fonts/lato-light-webfont.svg') format('svg');
+  src: url('/.tmp/css/fonts/fonts/lato-light-webfont.woff') format('woff'), url('/.tmp/css/fonts/fonts/lato-light-webfont.ttf') format('truetype'), url('/.tmp/css/fonts/fonts/lato-light-webfont.eot') format('embedded-opentype'), url('/.tmp/css/fonts/fonts/lato-light-webfont.svg') format('svg');
 }
 
 @font-face {
   font-family: "lato";
-  src: url('/.tmp/css/fonts/lato-regular-webfont.woff') format('woff'), url('/.tmp/css/fonts/lato-regular-webfont.ttf') format('truetype'), url('/.tmp/css/fonts/lato-regular-webfont.eot') format('embedded-opentype'), url('/.tmp/css/fonts/lato-regular-webfont.svg') format('svg');
+  src: url('/.tmp/css/fonts/fonts/lato-regular-webfont.woff') format('woff'), url('/.tmp/css/fonts/fonts/lato-regular-webfont.ttf') format('truetype'), url('/.tmp/css/fonts/fonts/lato-regular-webfont.eot') format('embedded-opentype'), url('/.tmp/css/fonts/fonts/lato-regular-webfont.svg') format('svg');
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/muhyde\/app\/_scss\/style\.scss}line{font-family:\0000332}}
@@ -7853,7 +7853,7 @@ body {
   width: 100%;
   margin: 0;
   background-position: top left;
-  background-image: url("/img/graphy.png");
+  background-image: url("img/graphy.png");
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/muhyde\/app\/_scss\/style\.scss}line{font-family:\0000341}}
 body hgroup {
