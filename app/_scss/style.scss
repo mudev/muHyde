@@ -45,7 +45,7 @@ body {
 	width: 100%;
 	margin: 0; 
 	background-position: top left;
-  background-image: url('/img/graphy.png');
+  background-image: url('../img/graphy.png');
   vgroup {
     @include grid-column(2);
     min-height: 100%;
