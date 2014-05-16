@@ -5,8 +5,8 @@
 @import "compass/css3";
 @import "compass/css3/font-face";
 
-@include font-face("lato-light", font-files("lato-light-webfont.woff", "lato-light-webfont.ttf", "lato-light-webfont.eot", "lato-light-webfont.svg"));
-@include font-face("lato", font-files("lato-regular-webfont.woff", "lato-regular-webfont.ttf", "lato-regular-webfont.eot", "lato-regular-webfont.svg"));
+@include font-face("lato-light", font-files("fonts/lato-light-webfont.woff", "fonts/lato-light-webfont.ttf", "fonts/lato-light-webfont.eot", "fonts/lato-light-webfont.svg"));
+@include font-face("lato", font-files("fonts/lato-regular-webfont.woff", "fonts/lato-regular-webfont.ttf", "fonts/lato-regular-webfont.eot", "fonts/lato-regular-webfont.svg"));
 
 @mixin sticky-footer($footer-height, $wrapper-selector: unquote("#wrapper"), $container-selector: unquote("#container"), $footer-selector: unquote("#footer")) {
     html, body {
@@ -32,12 +32,12 @@
 body {
   font-family: "lato-light";
   font-size: 1em;
-	line-height: 1.4;
+  line-height: 1.4;
 	height: 100%;
 	width: 100%;
 	margin: 0; 
 	background-position: top left;
-  background-image: url('/img/graphy.png');
+  background-image: url('img/graphy.png');
   hgroup {
     @include grid-column(1);
     min-height: 100%;
