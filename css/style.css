@@ -8043,7 +8043,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .android_logo {
-  background-image: url("/img/sk/android_logo.png");
+  background-image: url("../img/sk/android_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8053,7 +8053,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .angular_logo {
-  background-image: url("/img/sk/angular_logo.png");
+  background-image: url("../img/sk/angular_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8063,7 +8063,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .app_logo {
-  background-image: url("/img/sk/app_logo.png");
+  background-image: url("../img/sk/app_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8073,7 +8073,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .bower_logo {
-  background-image: url("/img/sk/bower_logo.png");
+  background-image: url("../img/sk/bower_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8083,7 +8083,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .cc_logo {
-  background-image: url("/img/sk/cc_logo.png");
+  background-image: url("../img/sk/cc_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8093,7 +8093,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .chef_logo {
-  background-image: url("/img/sk/chef_logo.png");
+  background-image: url("../img/sk/chef_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8103,7 +8103,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .compass_logo {
-  background-image: url("/img/sk/compass_logo.png");
+  background-image: url("../img/sk/compass_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8113,7 +8113,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .cordova_logo {
-  background-image: url("/img/sk/cordova_logo.png");
+  background-image: url("../img/sk/cordova_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8123,7 +8123,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .git_logo {
-  background-image: url("/img/sk/git_logo.png");
+  background-image: url("../img/sk/git_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8133,7 +8133,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .github_logo {
-  background-image: url("/img/sk/github_logo.png");
+  background-image: url("../img/sk/github_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8143,7 +8143,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .grunt_logo {
-  background-image: url("/img/sk/grunt_logo.png");
+  background-image: url("../img/sk/grunt_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8153,7 +8153,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .gulp_logo {
-  background-image: url("/img/sk/gulp_logo.png");
+  background-image: url("../img/sk/gulp_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8163,7 +8163,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .html5_logo {
-  background-image: url("/img/sk/html5_logo.png");
+  background-image: url("../img/sk/html5_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8173,7 +8173,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .jekyll_logo {
-  background-image: url("/img/sk/jekyll_logo.png");
+  background-image: url("../img/sk/jekyll_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8183,7 +8183,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .laravel_logo {
-  background-image: url("/img/sk/laravel_logo.png");
+  background-image: url("../img/sk/laravel_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8193,7 +8193,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .puppet_logo {
-  background-image: url("/img/sk/puppet_logo.png");
+  background-image: url("../img/sk/puppet_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8203,7 +8203,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .sketch_logo {
-  background-image: url("/img/sk/sketch_logo.png");
+  background-image: url("../img/sk/sketch_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8213,7 +8213,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .vagrant_logo {
-  background-image: url("/img/sk/vagrant_logo.png");
+  background-image: url("../img/sk/vagrant_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8223,7 +8223,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .wp_logo {
-  background-image: url("/img/sk/wp_logo.png");
+  background-image: url("../img/sk/wp_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8233,7 +8233,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .yeoman_logo {
-  background-image: url("/img/sk/yeoman_logo.png");
+  background-image: url("../img/sk/yeoman_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -8243,7 +8243,7 @@ header img {
 
 /* line 159, ../../app/_scss/style.scss */
 .zurb_logo {
-  background-image: url("/img/sk/zurb_logo.png");
+  background-image: url("../img/sk/zurb_logo.png");
   display: block;
   max-width: 100%;
   max-height: 100%;
