@@ -5,8 +5,10 @@
 @import "compass/css3";
 @import "compass/css3/font-face";
 
-@include font-face("lato-light", font-files("fonts/lato-light-webfont.woff", "fonts/lato-light-webfont.ttf", "fonts/lato-light-webfont.eot", "fonts/lato-light-webfont.svg"));
-@include font-face("lato", font-files("fonts/lato-regular-webfont.woff", "fonts/lato-regular-webfont.ttf", "fonts/lato-regular-webfont.eot", "fonts/lato-regular-webfont.svg"));
+$base-color: #A0A0A0;
+
+@include font-face("lato-light", font-files("lato-light-webfont.woff", "lato-light-webfont.ttf", "lato-light-webfont.eot", "lato-light-webfont.svg"));
+@include font-face("lato", font-files("lato-regular-webfont.woff", "lato-regular-webfont.ttf", "lato-regular-webfont.eot", "lato-regular-webfont.svg"));
 
 @mixin sticky-footer($footer-height, $wrapper-selector: unquote("#wrapper"), $container-selector: unquote("#container"), $footer-selector: unquote("#footer")) {
     html, body {
@@ -29,6 +31,12 @@
     height: $footer-height;
   }
 }
+@mixin Opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
 @mixin rounded_borders($color, $ca, $cb, $cc, $cd, $width) {
     -moz-border-radius: $ca $cb $cc $cd;
     -webkit-border-radius: $ca $cb $cc $cd;
@@ -45,7 +53,7 @@ body {
 	width: 100%;
 	margin: 0; 
 	background-position: top left;
-  background-image: url('../img/graphy.png');
+  background-image: url('/img/graphy.png');
   vgroup {
     @include grid-column(2);
     min-height: 100%;
@@ -75,11 +83,16 @@ header {
   letter-spacing: 0.1rem;
   word-spacing: 0.05rem;
 	font-weight: lighter;
+  top:2.7em;
+  right: 2em;
 }
 #mu_h4  {
   font-size: 0.7rem;
 	font-weight: lighter;
   letter-spacing: 0.1rem;
+  top:8.5em;
+  right: 8em;
+
 }
 .mudef {
   font-size: 0.8rem;
@@ -96,7 +109,9 @@ header {
 		word-spacing: 0.2em;
 		line-height: 1.2em;
 		margin:0;
-		padding:2.2em 0.5em 0em 1.6em;
+    padding:3.8em 0.5em 0em 1.6em;
+    color: $base-color;
+    @include Opacity(0.5);
 	}
 }
 .home {
@@ -157,7 +172,7 @@ header {
 }
 @each $member in android, angular, app, bower, cc, chef, compass, cordova, git, github, grunt, gulp, html5, jekyll, laravel, puppet, sketch, vagrant, wp, yeoman, zurb {
   .#{$member}_logo {
-    background-image: url("../img/sk/#{$member}_logo.png");
+    background-image: url("/img/sk/#{$member}_logo.png");
     display: block;
     max-width: 100%;
     max-height: 100%;
